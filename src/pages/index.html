@@ -18,6 +18,21 @@
             color: white;
             padding: 20px;
             text-align: center;
+            position: relative;
+        }
+
+        /* Стилі для IE попередження */
+        .ie-warning {
+            display: none;
+            background-color: #ffcccc;
+            color: #ff0000;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
         }
 
         .header__title {
@@ -46,6 +61,8 @@
         .content {
             padding: 50px 20px;
             text-align: center;
+            width: 800px;
+            margin: 0 auto;
         }
 
         .content__text {
@@ -81,24 +98,43 @@
             color: #888;
         }
 
+        /* Медіа-запит для перетворення ширини контенту на відносну */
+        @media (max-width: 1024px) {
+            .content {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+
+        /* Медіа-запит для вертикального меню при зменшенні екрану */
         @media (max-width: 768px) {
             .header__title {
                 font-size: 2em;
             }
 
+            .header__nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             .header__nav__link {
-                display: block;
+                width: 90%;
+                text-align: center;
                 margin: 10px 0;
             }
 
-            .content__text {
-                font-size: 1.2em;
+            .header {
+                padding: 30px 0;
             }
         }
     </style>
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
     <header class="header">
+        <!-- Повідомлення для користувачів Internet Explorer 10 і нижче -->
+        <div class="ie-warning">Ви використовуєте застарілу версію Internet Explorer. Будь ласка, оновіть браузер для кращого відображення сайту.</div>
         <h1 class="header__title">Hello, Webpack!</h1>
         <nav class="header__nav">
             <a class="header__nav__link" href="biography.html">Biography</a>
@@ -134,13 +170,13 @@
         <section class="swift">
             <img src="https://cdn.prod.website-files.com/63fda77e5fd49598bbf00892/6416e5ccdbc0d68da0d7727d_swift.jpg" alt="Swift">
             <div>
-                <h2>Про Swift</h2>
-                <p>Swift - це нова мова програмування для додатків для iOS, macOS, watchOS, та tvOS, котра базується на кращому з С та Objective-C, без обмежень пов’язаних з сумісністю з С. Swift увібрав у себе шаблони безпечного програмування та додав сучасні можливості, щоб зробити програмування простішим, гнучкішим, а головне – веселим. Бездоганна репутація Swift, що підтримується зрілими та широко вживаними фреймворками Cocoa та Cocoa Touch, дає можливість переосмислити те, як виглядає розробка програмного забезпечення.</p>
+                <h2>Swift: сучасна мова програмування для iOS</h2>
+                <p>Swift — це потужна та інтуїтивно зрозуміла мова програмування, розроблена Apple для створення додатків для iOS та macOS. Swift спрощує написання коду, підвищуючи його читабельність та зменшуючи кількість помилок. З новими функціями, такими як типова безпека та функціональне програмування, Swift робить розробку додатків простішою та ефективнішою.</p>
             </div>
         </section>
     </main>
     <footer>
-        © 2024. Всі права захищені.
+        <p>&copy; 2024 Артем Демченко. Всі права захищені.</p>
     </footer>
 </body>
 </html>

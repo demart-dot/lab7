@@ -1,0 +1,32 @@
+/* print.css */
+
+@media print {
+    /* Сховати шапку та підвал сайту */
+    .header, footer {
+        display: none;
+    }
+
+    /* Виводити назву сайту, заголовок та вміст */
+    body {
+        font-family: "Times New Roman", Georgia, Palatino, serif;
+        margin: 50px; /* Встановлюємо поля при друці */
+        background: none; /* Приховуємо фон */
+        color: black; /* Встановлюємо чорний колір тексту */
+    }
+
+    /* Сховати фонові зображення та кольори */
+    * {
+        background: none !important; /* Сховати всі фонові кольори */
+        color: inherit !important; /* Встановлюємо кольори за замовчуванням */
+    }
+
+    /* Відобразити повний URL замість гіпертекстових посилань */
+    a::after {
+        content: " (" attr(href) ")";
+    }
+
+    /* Вирівнювання тексту по центру для заголовків */
+    h1, h2 {
+        text-align: center;
+    }
+}

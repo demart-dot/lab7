@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biography</title>
+    <link rel="stylesheet" href="print.css" media="print"> <!-- Підключення стилів для друку -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -73,14 +74,46 @@
             color: #888;
         }
 
+        /* Медіа запити */
+        @media (max-width: 1024px) {
+            .content {
+                width: 90%; /* Відносна ширина для контенту */
+                margin: 0 auto; /* Центрування */
+            }
+        }
+
         @media (max-width: 768px) {
             .header__title {
                 font-size: 2em;
             }
 
+            .header__nav {
+                display: flex;
+                flex-direction: column; /* Вертикальне меню */
+                align-items: center; /* Центрування елементів меню */
+            }
+
             .header__nav__link {
-                display: block;
-                margin: 10px 0;
+                width: 100%; /* Відносна ширина елементів меню */
+                text-align: center; /* Центрування тексту меню */
+                margin: 10px 0; /* Відстань між елементами меню */
+            }
+        }
+
+        /* Приховане повідомлення для IE 10 та нижчих */
+        .ie-message {
+            display: none; /* Сховати за замовчуванням */
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            .ie-message {
+                display: block; /* Показати для IE */
+                background-color: #f8d7da;
+                color: #721c24;
+                padding: 15px;
+                text-align: center;
+                margin-top: 20px;
+                border: 1px solid #f5c6cb;
             }
         }
     </style>
@@ -94,6 +127,9 @@
             <a class="header__nav__link" href="news.html">News</a> 
         </nav>
     </header>
+    <div class="ie-message">
+        Ваш браузер застарілий. Рекомендуємо оновити його для кращої роботи з сайтом.
+    </div>
     <main class="content">
         <section class="biography">
             <img src="https://finetechhub.com/wp-content/uploads/2024/07/Pictures-and-anime-boy-with-hand-on-neck-1024x1024.jpg.webp" alt="Фото">

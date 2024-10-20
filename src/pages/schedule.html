@@ -6,7 +6,7 @@
     <title>Розклад Демченка Артема Юрійовича</title>
     <style>
         body {
-            background: linear-gradient(to bottom right, #0B3B8E, #A3D2DB, #F0F0F0); /* Градієнтний фон */
+            background: linear-gradient(to bottom right, #0B3B8E, #A3D2DB, #F0F0F0);
             font-family: Arial, sans-serif;
             color: #272221;
             margin: 0;
@@ -91,9 +91,50 @@
             font-size: 0.9em;
             color: #888;
         }
+
+        /* Медіа запити */
+        @media (max-width: 800px) {
+            body {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .header__nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header__nav__link {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            .ie-message {
+                display: block;
+                background-color: #ffcc00;
+                color: black;
+                padding: 10px;
+                text-align: center;
+                font-size: 1.2em;
+                margin-bottom: 20px;
+            }
+        }
+
+        .ie-message {
+            display: none;
+        }
     </style>
+    <link rel="stylesheet" href="print.css" media="print"> <!-- Підключення print.css -->
 </head>
 <body>
+
+    <div class="ie-message">
+        Увага: Ви використовуєте застарілий браузер. Рекомендуємо оновити браузер для кращого досвіду.
+    </div>
 
     <header class="header">
         <h1 class="header__title">Розклад Демченка Артема Юрійовича</h1>
@@ -208,8 +249,7 @@
     </table>
 
     <footer>
-        © 2024. Всі права захищені.
+        &copy; 2024, Демченко Артем Юрійович
     </footer>
-
 </body>
 </html>

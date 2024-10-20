@@ -1,73 +1,110 @@
 /* Основний блок сторінки */
 .page {
-    background: linear-gradient(to bottom right, #0B3B8E, #A3D2DB, #F0F0F0);
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #272221;
-  }
-  
-  /* Контент */
-  .content {
-    padding: 20px;
-  
-    &__title {
+  background: linear-gradient(to bottom right, #0B3B8E, #A3D2DB, #F0F0F0);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #272221;
+}
+
+/* Контент */
+.content {
+  padding: 20px;
+
+  &__title {
       color: #272221;
       margin-bottom: 20px;
-    }
-  
-    &__text {
+  }
+
+  &__text {
       font-size: 1.2em;
       line-height: 1.6;
-    }
   }
-  
-  /* Навігація в хедері */
-  .header {
-    &__nav {
+}
+
+/* Навігація в хедері */
+.header {
+  &__nav {
       display: flex;
-    }
-  
-    &__nav-link {
+      flex-direction: row; /* Горизонтальне меню за замовчуванням */
+  }
+
+  &__nav-link {
       color: #3C5A94;
       text-decoration: none;
       padding: 10px;
       margin-right: 10px;
-  
+
       &:hover {
-        text-decoration: underline;
+          text-decoration: underline;
       }
-    }
   }
-  
-  /* Таблиці */
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-  
-    &__cell {
+}
+
+/* Таблиці */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__cell {
       padding: 10px;
       text-align: left;
       border: 1px solid #3C5A94;
-    }
-  
-    &__header {
+  }
+
+  &__header {
       background-color: #3C5A94;
       color: #fff;
-    }
   }
-  
-  /* Футер */
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #3C5A94;
-    color: #fff;
-  
-    &__link {
+}
+
+/* Футер */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3C5A94;
+  color: #fff;
+
+  &__link {
       color: #fff;
-  
+
       &:hover {
-        text-decoration: underline;
+          text-decoration: underline;
       }
-    }
   }
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 800px) {
+  .content {
+      width: 90%; /* Відносна ширина 90% */
+      margin: 0 auto; /* Центрування контенту */
+  }
+
+  .header {
+      &__nav {
+          flex-direction: column; /* Вертикальне меню */
+          align-items: center; /* Центрування елементів меню */
+      }
+
+      &__nav-link {
+          width: 100%; /* Відносна ширина для елементів меню */
+          text-align: center; /* Центрування тексту */
+          margin: 5px 0; /* Відстань між пунктами меню */
+      }
+  }
+}
+
+/* Повідомлення для IE 10 та нижче */
+.ie-message {
+  display: none; /* Сховати за замовчуванням */
+  background-color: #f39c12;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ie-message {
+      display: block; /* Відображати повідомлення для IE */
+  }
+}

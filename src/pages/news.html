@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новини</title>
+    <link rel="stylesheet" href="print.css" media="print"> <!-- Підключення файлу стилів для друку -->
     <style>
+        /* Ваші існуючі стилі тут */
         body {
             background: linear-gradient(to bottom right, #0B3B8E, #A3D2DB, #F0F0F0);
             margin: 0;
@@ -74,9 +76,52 @@
             background: linear-gradient(to top, #A3D2DB, #0B3B8E);
             padding: 20px 0;
         }
+
+        /* Стилі для адаптивності */
+        @media (max-width: 800px) {
+            main {
+                width: 90%;
+                margin: 0 auto; /* Центрування контенту */
+            }
+
+            .header__nav {
+                display: flex;
+                flex-direction: column; /* Вертикальне меню */
+                align-items: center;
+                padding: 10px 0;
+            }
+
+            .header__nav__link {
+                width: 100%; /* Відносна ширина */
+                text-align: center; /* Центрування тексту */
+                margin: 5px 0; /* Відстань між пунктами меню */
+            }
+
+            .header {
+                padding: 15px; /* Зменшення висоти шапки */
+            }
+        }
+
+        /* Повідомлення для IE 10 та нижче */
+        .ie-message {
+            display: none; /* Сховати за замовчуванням */
+            background-color: #f39c12;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            .ie-message {
+                display: block; /* Відображати повідомлення */
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="ie-message">
+        Ваш браузер застарів. Будь ласка, оновіть його для кращого перегляду сайту.
+    </div>
 
     <header class="header">
         <h1 class="header__title">Новини</h1>
@@ -118,8 +163,7 @@
     </main>
 
     <footer>
-        <p>© 2024 Ваше Ім'я. Всі права захищені.</p>
+        <p>&copy; 2024 Мій веб-сайт</p>
     </footer>
-
 </body>
 </html>

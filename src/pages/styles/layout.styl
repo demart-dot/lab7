@@ -57,3 +57,31 @@
 
     &:hover
       text-decoration underline
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 800px)
+  .content
+    width 90% /* Відносна ширина 90% */
+    margin 0 auto /* Центрування контенту */
+
+  .header
+    &__nav
+      flex-direction column /* Вертикальне меню */
+      align-items center /* Центрування елементів меню */
+
+    &__nav-link
+      width 100% /* Відносна ширина для елементів меню */
+      text-align center /* Центрування тексту */
+      margin 5px 0 /* Відстань між пунктами меню */
+
+/* Повідомлення для IE 10 та нижче */
+.ie-message
+  display none /* Сховати за замовчуванням */
+  background-color #f39c12
+  color white
+  padding 10px
+  text-align center
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+  .ie-message
+    display block /* Відображати повідомлення для IE */
