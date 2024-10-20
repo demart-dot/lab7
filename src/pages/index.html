@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpack App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #0B3B8E, #A3D2DB, #F0F0F0);
+            color: #272221;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #3c5a94;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header__title {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .header__nav {
+            margin-top: 15px;
+        }
+
+        .header__nav__link {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .header__nav__link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .content__text {
+            font-size: 1.5em;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        section {
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        section img {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .header__title {
+                font-size: 2em;
+            }
+
+            .header__nav__link {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .content__text {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Hello, Webpack!</h1>
+        <nav class="header__nav">
+            <a class="header__nav__link" href="biography.html">Biography</a>
+            <a class="header__nav__link" href="schedule.html">Schedule</a>
+            <a class="header__nav__link" href="news.html">News</a> 
+        </nav>
+    </header>
+    <main class="content">
+        <section class="biography">
+            <img src="https://finetechhub.com/wp-content/uploads/2024/07/Pictures-and-anime-boy-with-hand-on-neck-1024x1024.jpg.webp" alt="Фото Артема Демченка">
+            <div>
+                <h2>Biography</h2>
+                <p>Привіт! Мене звати Артем Демченко, я навчаюсь у групі 6-1212-1 на спеціальності "Програмна інженерія". Захоплююся розробкою програмного забезпечення та постійно вдосконалюю свої навички. Також я цікавлюсь англійською мовою та вдосконалюю її, щоб читати документацію з програмування на англійській мові.</p>
+            </div>
+        </section>
+
+        <section class="web-dev">
+            <img src="https://itcollege.lviv.ua/wp-content/uploads/2021/11/depositphotos_20402935-stock-photo-seo-web-development-concept-web_55ec4.jpg" alt="Веб-програмування">
+            <div>
+                <h2>Особливості веб-програмування</h2>
+                <p>Веб-програмування — це створення сайтів та програм, які працюють онлайн. Ця сфера дозволяє створювати динамічні веб-сайти та додатки, які сприяють зручній та ефективній взаємодії з користувачами. Веб-програмування є важливою складовою розробки веб-сайтів та охоплює використання різноманітних технологій та мов програмування для створення функціональних та естетичних інтерфейсів.</p>
+            </div>
+        </section>
+
+        <section class="docker">
+            <img src="https://res.cloudinary.com/hugs4bugs/image/upload/v1703441731/hugs4bugs/01-primary-blue-docker-logo_rl8tst.png" alt="Docker">
+            <div>
+                <h2>Що таке Docker та технологія контейнерів Linux</h2>
+                <p>Контейнери Linux — незалежні середовища виконання з власними центральним процесором, пам’яттю, блоком вводу-виводу та мережевими ресурсами. На виході ви отримуєте щось подібне до віртуальної машини, яка працює як надбудова гостьової ОС. Контейнери є більш привабливим середовищем для сучасних застосунків з вимогами веб-масштабування.</p>
+            </div>
+        </section>
+
+        <section class="swift">
+            <img src="https://cdn.prod.website-files.com/63fda77e5fd49598bbf00892/6416e5ccdbc0d68da0d7727d_swift.jpg" alt="Swift">
+            <div>
+                <h2>Про Swift</h2>
+                <p>Swift - це нова мова програмування для додатків для iOS, macOS, watchOS, та tvOS, котра базується на кращому з С та Objective-C, без обмежень пов’язаних з сумісністю з С. Swift увібрав у себе шаблони безпечного програмування та додав сучасні можливості, щоб зробити програмування простішим, гнучкішим, а головне – веселим. Бездоганна репутація Swift, що підтримується зрілими та широко вживаними фреймворками Cocoa та Cocoa Touch, дає можливість переосмислити те, як виглядає розробка програмного забезпечення.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        © 2024. Всі права захищені.
+    </footer>
+</body>
+</html>

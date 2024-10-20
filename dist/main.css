@@ -1,0 +1,64 @@
+.page{background:linear-gradient(to bottom right, #0B3B8E, #A3D2DB, #F0F0F0);padding:20px;font-family:Arial,sans-serif;color:#272221}.content{padding:20px}.content__title{color:#272221;margin-bottom:20px}.content__text{font-size:1.2em;line-height:1.6}.header__nav{display:flex}.header__nav-link{color:#3c5a94;text-decoration:none;padding:10px;margin-right:10px}.header__nav-link:hover{text-decoration:underline}.table{width:100%;border-collapse:collapse}.table__cell{padding:10px;text-align:left;border:1px solid #3c5a94}.table__header{background-color:#3c5a94;color:#fff}.footer{text-align:center;padding:20px;background-color:#3c5a94;color:#fff}.footer__link{color:#fff}.footer__link:hover{text-decoration:underline}
+/* Основний блок сторінки */
+.page {
+  background: linear-gradient(to bottom right, #0B3B8E, #A3D2DB, #F0F0F0);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #272221;
+}
+/* Контент */
+.content {
+  padding: 20px;
+}
+.content__title {
+  color: #272221;
+  margin-bottom: 20px;
+}
+.content__text {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+/* Навігація в хедері */
+.header__nav {
+  display: flex;
+}
+.header__nav-link {
+  color: #3C5A94;
+  text-decoration: none;
+  padding: 10px;
+  margin-right: 10px;
+}
+.header__nav-link:hover {
+  text-decoration: underline;
+}
+/* Таблиці */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table__cell {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #3C5A94;
+}
+.table__header {
+  background-color: #3C5A94;
+  color: #fff;
+}
+/* Футер */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3C5A94;
+  color: #fff;
+}
+.footer__link {
+  color: #fff;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.page{background:linear-gradient(to bottom right,#0b3b8e,#a3d2db,#f0f0f0);padding:20px;font-family:Arial,sans-serif;color:#272221}.content{padding:20px}.content__title{color:#272221;margin-bottom:20px}.content__text{font-size:1.2em;line-height:1.6}.header__nav{display:flex}.header__nav-link{color:#3c5a94;text-decoration:none;padding:10px;margin-right:10px}.header__nav-link:hover{text-decoration:underline}.table{width:100%;border-collapse:collapse}.table__cell{padding:10px;text-align:left;border:1px solid #3c5a94}.table__header{background-color:#3c5a94;color:#fff}.footer{text-align:center;padding:20px;background-color:#3c5a94;color:#fff}.footer__link{color:#fff}.footer__link:hover{text-decoration:underline}
+
+/*# sourceMappingURL=main.css.map*/

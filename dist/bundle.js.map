@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"mBAKAA,QAAQC,IAAI,4B","sources":["webpack://lab6/./src/pages/index.js"],"sourcesContent":["import './styles/main.scss';\r\nimport './styles/theme.less';\r\nimport './styles/layout.styl';\r\n\r\n// Додатковий JS код, якщо потрібно\r\nconsole.log('Стилі успішно підключені!');"],"names":["console","log"],"sourceRoot":""}
